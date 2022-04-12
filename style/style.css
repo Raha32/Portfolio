@@ -7,6 +7,7 @@ body{
 	overflow:hidden;
 	background-image: url("../images/Background.png");
 	background-repeat:no-repeat;
+	background-size:cover;
 }
 
 .Header-bar{
@@ -37,7 +38,7 @@ body{
 	vertical-align:middle;
 	display:table-cell;
 	position:relative;
-	left:85vw;
+	left:84vw;
 }
 
 .nav-bar a:hover{
@@ -46,9 +47,10 @@ body{
 }
 
 .Picture_Profile{
+	animation-duration:1s;
 	display:block;
 	float:inline-start;
-	position:fixed;
+	position:absolute;
 	margin-top:40px;
 	left:753px;
 	height:203px;
@@ -191,5 +193,90 @@ body{
 	margin:13px 0 0px 0px;
 	background-color:black;
 	bottom:0;
+}
+
+@media (max-width: 810px){
+	body{overflow-y:scroll;}
+	.Header-bar{}
+	.nav-bar{width:100%;}
+	.nav-bar a{
+	margin:0 0 0 0;
+	left:510px;
+	}
+	.Picture_Profile{
+		margin:0 0 0 233px;
+		left:0;
+		position:inherit;
+		float:none;
+		animation-duration:0s
+	}
+	.Front-text{margin:0 0 0 101px;}
+	.Mid-Text{margin:0 0 0 101px;}
+	.Lower-text{margin:0 0 0 101px;}
+	#footer{bottom:0;
+	position:inherit;}
+}
+
+@media (max-width: 428px){
+	body{overflow-y:scroll;}
+	.Header-bar{}
+	.nav-bar{width:100%;}
+	.nav-bar a{
+	margin:0 0 0 0;
+	left:510px;
+	}
+	.Picture_Profile{
+		margin:0 0 0 64px;
+		left:0;
+		position:inherit;
+		float:none;
+		animation-duration:0s
+	}
+	.Front-text{
+		width:420px;
+		height:288px;
+		margin:0 0 0 4px;
+		background-image: url("../images/WindowSmall.png")
+	}
+	.Front-text h2{
+		font-size:20px;
+		padding:0 0 0 5px;
+	}
+	.Front-text p{
+		font-size:18px;
+		width:400px;
+	}
+	.Front-text hr{
+		width:380px;
+	}
+	.Mid-Text{
+		width:420px;
+		height:288px;
+		margin:0 0 0 4px;
+		background-image: url("../images/WindowSmall.png")
+	}
+	.Mid-Text h2{
+		font-size:20px;
+		padding:0 0 0 5px;
+	}
+
+	.Mid-Text .mini-nav{
+		width:405px;
+	}
+	.Lower-text{
+		width:420px;
+		height:288px;
+		margin:0 0 0 4px;
+		background-image: url("../images/WindowSmall.png")
+	}
+	.Lower-text h2{
+		font-size:20px;
+		padding:0 0 0 5px;
+	}
+	.Lower-text .mini-nav{
+		width:405px;
+	}
+	#footer{bottom:0;
+	position:inherit;}
 }
 
