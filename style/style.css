@@ -162,6 +162,20 @@ body{
 
 /* Competences window */
 
+#sliders{
+	float:inline-start;
+	margin:130px 0 0 20px;
+}
+
+#rightslide{
+	margin-left:445px;
+
+}
+
+#leftslide{
+
+}
+
 .Mid-Text{
 	margin:-332px 0 0 48vw;
 	display:block;
@@ -191,7 +205,8 @@ body{
 }
 #lang{
 	display:block;
-	margin:2vw 0 0 12vw;
+	margin:-150px 173px 0 0;
+	float:right;
 }
 
 #img #htmlpng{
@@ -200,26 +215,33 @@ body{
 }
 
 #img #csspng{
+	margin-right:34px;
 	width:170px;
 	height:220px;
 }
 
 #img #jspng{
+	margin:30px 28px 0 0;
 	width:170px;
 	height:160px;
 }
 
 #img #pythonpng{
+	margin:30px 35px 0 0;
 	width:170px;
 	height:170px;
 }
 
 #img #sqlpng{
+	margin:30px 35px 0 0;
 	width:170px;
 	height:160px;
 }
 
 #img #cpng{
+	margin:20px 35px 0 0;
+	width:180px;
+	height:190px;
 }
 
 .Mid-Text a{
