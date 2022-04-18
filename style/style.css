@@ -209,6 +209,22 @@ body{
 	float:right;
 }
 
+#ide{
+	display:block;
+	margin:-150px 173px 0 0;
+	float:right;
+}
+
+#imgide #vimpng{
+	width:240px;
+	height:220px;
+}
+
+#imgide #vspng{
+	width:240px;
+	height:220px;
+}
+
 #img #htmlpng{
 	width:240px;
 	height:220px;
