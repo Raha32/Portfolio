@@ -3,8 +3,19 @@
 	padding: auto;
 }
 
+
 body{
 	background-color:#008080;
+	animation: hideanimation 15s;
+}
+
+@keyframes hideanimation{
+	from{
+		overflow-y:hidden;
+	}
+	to{
+		overflow-y:auto;
+	}
 }
 
 .Header-bar{
@@ -43,6 +54,7 @@ body{
 }
 
 #left-side{
+	user-select:none;
 	float:inline-start;
 	position:absolute;
 }
@@ -139,10 +151,11 @@ body{
 /* Presentation window */
 
 .Front-text{
+	overflow:hidden;
 	margin:20px 0 0 2vw;
 	height:416px;
 	width:604px;
-	background-image: url("../images/WindowMedium.png");
+	background-image: url("../images/WindowMediumpresentation.png");
 	box-shadow: -15px 13px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -157,6 +170,20 @@ body{
 	width:578px;
 	font-size:24px;
 	padding:20px 0px 0px 15px;
+	margin:auto auto auto 0;
+}
+
+.writeanimation{
+	margin: 0 auto;
+	overflow:hidden;
+	white-space:nowrap;
+	animation: typing 3.5s  steps(40,end);
+}
+
+@keyframes typing{
+	from{width: 0;}
+	to {width:578px;}
+
 }
 
 .Front-text hr{
@@ -188,6 +215,7 @@ body{
 }
 
 .Mid-Text{
+	user-select:none;
 	margin:-332px 0 0 48vw;
 	display:block;
 	height:416px;
@@ -218,6 +246,7 @@ body{
 }
 
 .mini-nav .line{
+	user-select:none;
 	margin-top:-30px;
 	height:30px;
 	width:1.5px;
@@ -289,7 +318,6 @@ body{
 	text-align:center;
 	display: table-cell;
 	vertical-align:middle;
-	user-select:none;
 }
 
 .btn#langprog:hover{
@@ -316,12 +344,14 @@ body{
 /*More infos window*/
 
 .Lower-text{
+	overflow:hidden;
 	margin:-86px 0 0 15vw;
 	display:block;
 	height:416px;
 	width:604px;
 	background-image:url("../images/WindowMedium.png");
 	box-shadow:7px 13px 5px rgba(0,0,0, 0.2);
+	user-select:none;
 }
 
 .Lower-text h2{

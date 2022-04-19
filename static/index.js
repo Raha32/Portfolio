@@ -15,15 +15,16 @@ function initElement(){
 	let i = 0;
 	let i_x = 0;
 	let i_i = 0;
+	let i_a = 0;
 	let langA = 1;
 	let ideA = 0;
+	let imgvim = 1;
 
-	while (i < imgidechild.length){
-		imgidechild[i].style.display = "none";
-		i++;
+	while (i_a < imgidechild.length){
+		imgidechild[i_a].style.display = "none";
+		i_a++;
 		i_i++;
 	}
-	i = 0;
 
 	while (i < imgchild.length){
 		imgchild[i].style.display = "none";
@@ -33,9 +34,10 @@ function initElement(){
 	
 	// index for languages 
 	i = 0;
+	i_a = 0;
 	i_x--;
 	i_i--;
-
+	
 	imgchild[0].style.display = "block";
 	ideprog.onclick = showIde;
 	langprog.onclick = showLang;
@@ -55,16 +57,14 @@ function initElement(){
 		ideA = 1;
 		langA = 0;
 		ide.style.display = "block";
-		imgidechild[0].style.display = "block";
+		if (imgvim == 1){
+			imgidechild[0].style.display = "block";
+			imgvim = 0;
+		}
 	}
 	
-	if (langA == 1){
-		console.log("true");
-	}
-
 	function slideright(){
 		if (langA == 1){
-			
 			if ((i < i_x) && !(i > i_x)){
 				imgchild[i].style.display = "none";
 				i++;
@@ -80,14 +80,14 @@ function initElement(){
 
 		else if(ideA == 1){
 
-			if ((i < i_i) && !(i > i_i)){
-				imgidechild[i].style.display = "none";
-				i++;
-				imgidechild[i].style.display = "block";
+			if ((i_a < i_i) && !(i_a > i_i)){
+				imgidechild[i_a].style.display = "none";
+				i_a++;
+				imgidechild[i_a].style.display = "block";
 			}
 
 			else{
-				i = 0;
+				i_a = 0;
 				imgidechild[i_i].style.display = "none";
 				imgidechild[0].style.display = "block";
 			}
@@ -110,14 +110,14 @@ function initElement(){
 		}
 
 		else if(ideA == 1){
-			if ((i <= i_i) && !(i > i_i) && !(i == 0)){
-				imgidechild[i].style.display = "none";
-				i--;
-				imgidechild[i].style.display = "block";
+			if ((i_a <= i_i) && !(i_a > i_i) && !(i_a == 0)){
+				imgidechild[i_a].style.display = "none";
+				i_a--;
+				imgidechild[i_a].style.display = "block";
 			}
 
 			else{
-				i = 1;
+				i_a = 1;
 				imgidechild[i_i].style.display = "block";
 				imgidechild[0].style.display = "none";
 			}
