@@ -15,6 +15,8 @@ function initElement(){
 	let i = 0;
 	let i_x = 0;
 	let i_i = 0;
+	let langA = 1;
+	let ideA = 0;
 
 	while (i < imgidechild.length){
 		imgidechild[i].style.display = "none";
@@ -28,16 +30,13 @@ function initElement(){
 		i++;
 		i_x++;
 	}
-
-	if (ide.className == "active"){
-		alert("true");
-	}
+	
 	// index for languages 
 	i = 0;
 	i_x--;
+	i_i--;
 
 	imgchild[0].style.display = "block";
-
 	ideprog.onclick = showIde;
 	langprog.onclick = showLang;
 	rightslide.onclick = slideright;
@@ -46,43 +45,82 @@ function initElement(){
 
 	function showLang(){
 		lang.style.display = "block";
-		lang.className="active";
-		ide.classList.remove("active");
+		langA = 1;
+		ideA = 0;
 		ide.style.display = "none";
 	}
 
 	function showIde(){
 		lang.style.display = "none";
-		ide.className="active";
-		lang.classList.remove("active");
+		ideA = 1;
+		langA = 0;
 		ide.style.display = "block";
+		imgidechild[0].style.display = "block";
+	}
+	
+	if (langA == 1){
+		console.log("true");
 	}
 
 	function slideright(){
+		if (langA == 1){
+			
+			if ((i < i_x) && !(i > i_x)){
+				imgchild[i].style.display = "none";
+				i++;
+				imgchild[i].style.display = "block";
+			}
 
-		if ((i < i_x) && !(i > i_x)){
-			imgchild[i].style.display = "none";
-			i++;
-			imgchild[i].style.display = "block";
+			else{
+				i = 0;
+				imgchild[i_x].style.display = "none";
+				imgchild[0].style.display = "block";
+			}
 		}
-		else{
-			i = 0;
-			imgchild[i_x].style.display = "none";
-			imgchild[0].style.display = "block";
+
+		else if(ideA == 1){
+
+			if ((i < i_i) && !(i > i_i)){
+				imgidechild[i].style.display = "none";
+				i++;
+				imgidechild[i].style.display = "block";
+			}
+
+			else{
+				i = 0;
+				imgidechild[i_i].style.display = "none";
+				imgidechild[0].style.display = "block";
+			}
+		
 		}
 	}
 
 	function slideleft(){
-		
-		if ((i <= i_x) && !(i > i_x) && !(i == 0)){
-			imgchild[i].style.display = "none";
-			i--;
-			imgchild[i].style.display = "block";
+		if (langA == 1){	
+			if ((i <= i_x) && !(i > i_x) && !(i == 0)){
+				imgchild[i].style.display = "none";
+				i--;
+				imgchild[i].style.display = "block";
 			}
-		else{
-			i = 5;
-			imgchild[i_x].style.display = "block";
-			imgchild[0].style.display = "none";
+			else{
+				i = 5;
+				imgchild[i_x].style.display = "block";
+				imgchild[0].style.display = "none";
+			}
+		}
+
+		else if(ideA == 1){
+			if ((i <= i_i) && !(i > i_i) && !(i == 0)){
+				imgidechild[i].style.display = "none";
+				i--;
+				imgidechild[i].style.display = "block";
+			}
+
+			else{
+				i = 1;
+				imgidechild[i_i].style.display = "block";
+				imgidechild[0].style.display = "none";
+			}
 		}
 	}
 }

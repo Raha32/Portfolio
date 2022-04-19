@@ -108,8 +108,9 @@ body{
 }
 
 .Horloge h4{
+	user-select:none;
 	color:white;
-	font-size:12px;
+	font-size:10px;
 	margin:2px 0 0 5px;
 }
 
@@ -123,8 +124,9 @@ body{
 }
 
 .Picture_Profile h4{
+	user-select:none;
 	color:white;
-	font-size:12px;
+	font-size:10px;
 	margin:2px 0 0 5px;
 }
 .Picture_Profile img{
@@ -145,7 +147,9 @@ body{
 }
 
 .Front-text h2{
-	padding: 4px 0px 0px 10px;
+	font-size:20px;
+	user-select:none;
+	padding: 7px 0px 0px 10px;
 	color:white;
 }
 
@@ -169,10 +173,17 @@ body{
 
 #rightslide{
 	margin-left:445px;
-
 }
 
-#leftslide{
+#rightslide:active{
+	width:50px;
+	height:50px;
+}
+
+#leftslide:active{
+	margin:0 0 0 10px;
+	width:50px;
+	height:50px;
 
 }
 
@@ -186,7 +197,9 @@ body{
 }
 
 .Mid-Text h2{
-	padding: 4px 0px 0px 10px;
+	font-size:20px;
+	user-select:none;
+	padding: 7px 0px 0px 10px;
 	color:white;
 }
 
@@ -197,12 +210,20 @@ body{
 }
 
 .Mid-Text .mini-nav{
-	margin:14px 0 0 9px;
+	margin:14.5px 0 0 9.2px;
 	height:30px;
 	width:589px;
-	background-color:Grey;
-	box-shadow:0 4px 5px rgba(0,0,0, 0.2);
+	background-color:#c2c2c2;
+	box-shadow:inset 3px 2px 5px rgba(0,0,0, 0.2);
 }
+
+.mini-nav .line{
+	margin-top:-30px;
+	height:30px;
+	width:1.5px;
+	background-color:#adacac;
+}
+
 #lang{
 	display:block;
 	margin:-150px 173px 0 0;
@@ -260,7 +281,7 @@ body{
 	height:190px;
 }
 
-.Mid-Text a{
+.btn{
 	color:white;
 	text-decoration:none;
 	height:30px;
@@ -268,13 +289,28 @@ body{
 	text-align:center;
 	display: table-cell;
 	vertical-align:middle;
+	user-select:none;
 }
 
-.Mid-Text a:hover{
-	Background-color:white;
-	color:black;
+.btn#langprog:hover{
 	box-shadow:3px 3px 3px rgba(0,0,0, 0.2);
-	border: 2px solid black;
+	background-color:#C0C0C0;
+}
+
+.btn#ideprog:hover{
+	background-color:#C0C0C0;
+	box-shadow:-3px 3px 3px rgba(0,0,0, 0.2);
+}
+
+
+.btn#langprog:active{
+	background-color:#C0C0C0;
+	box-shadow:inset -0.5px 0px 5px 2px rgba(0,0,0, 0.2);
+}
+
+.btn#ideprog:active{
+	background-color:#C0C0C0;
+	box-shadow:inset 0.5px 0px 5px 2px rgba(0,0,0, 0.2);
 }
 
 /*More infos window*/
@@ -289,7 +325,9 @@ body{
 }
 
 .Lower-text h2{
-	padding:4px 0px 0px 10px;
+	font-size:20px;
+	user-select:none;
+	padding:7px 0px 0px 10px;
 	color:white;
 }
 
@@ -297,11 +335,11 @@ body{
 	margin:14px 0 0 9px;
 	height:30px;
 	width:589px;
-	background-color:Grey;
-	box-shadow:0 4px 5px rgba(0,0,0, 0.2);
+	background-color:#c2c2c2;
+	box-shadow:inset 3px 2px 5px rgba(0,0,0, 0.2);
 }
 
-.Lower-text a{
+.Lower-text .btn{
 	color:white;
 	text-decoration:none;
 	height:30px;
@@ -311,10 +349,16 @@ body{
 	vertical-align:middle;
 }
 
-.Lower-text a:hover{
-	background-color:white;
-	color:black;
-	border:2px solid black;
+.btn#Hobbybtn:hover{
+	box-shadow:3px 3px 3px rgba(0,0,0, 0.2);
+	background-color:#c2c2c2;
+	color:white;
+}
+
+.btn#Diplomabtn:hover{
+	box-shadow:-3px 3px 3px rgba(0,0,0, 0.2);
+	background-color:#c2c2c2;
+	color:white;
 }
 
 /* footer */
