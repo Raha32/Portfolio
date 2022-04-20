@@ -8,8 +8,10 @@
 		<link rel="icon" type="image/x-icon" href="./FavIcon.ico">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 		<script type= "text/javascript" src="./static/index.js"></script>
+		<script type="text/javascript" src="./static/clock.js"></script>
+		<script type="text/javascript" src="./static/windows.js"></script>
 	</head>
-	<body onload="initElement();">
+	<body id="bodytag" onload="initElement(); onload=clock(); onload=main();">
 		<header class="Header-bar">
 				<h1>R.H</h1>
 		</header>
@@ -38,13 +40,14 @@
 
 		<div class="Horloge animate__animated animate__fadeInUp">
 			<h4>Horloge.bat</h4>
+			<div id="clock"></div>
 		</div>
 		<div class="Picture_Profile animate__animated animate__fadeInUp">
 			<h4>Image.png</h4>
 			<img src="./images/userpic.png">
 
 		</div>
-		<div class="Front-text animate__animated animate__fadeInUp">
+		<div id="prestab" class="Front-text animate__animated animate__fadeInUp">
 			<h2>Présentation.txt</h2>
 			<br>
 			<p class="writeanimation">Je vous souhaite la bienvenue, je suis Hadid Rayann.
@@ -92,6 +95,46 @@
 				<a class="btn" id="Diplomabtn">Diplômes</a>
 				<div class="line"/>
 			</nav>
+			<div id="imghobby">
+				<div class="object">
+					<img src="./images/programmationlogo.png">
+					<p>Programmation</p>
+				</div>
+				<div class="object">
+					<img src="./images/artlogo.png">
+					<p>l'animation 2D/Design grahique</p>
+				</div>
+				<div class="object">
+					<img src="./images/stronklogo.png">
+					<p>Sport de combat/Musculation</p>
+				</div>
+				<div class="object">
+					<img src="./images/vidyalogo.png">
+					<p>Jeux Vidéos</p>
+				</div>
+			</div>
+
+			<div id="imgdiploma">
+				<div class="object">
+					<img src="./images/diplomalogo.png">
+					<p>Brevet des collèges</p>
+				</div>
+
+				<div class="object">
+					<img src="./images/diplomalogo.png">
+					<p>Brevet d'études professionelles</p>
+				</div>
+
+				<div class="object">
+					<img src="./images/diplomalogo.png">
+					<p>Bac RISC</p>
+				</div>
+				
+				<div class="object">
+					<img src="./images/carlogo.png">
+					<p> Permis B</p>
+				</div>
+			</div>
 
 		</div>
 		

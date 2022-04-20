@@ -1,4 +1,5 @@
 function initElement(){
+	
 	// initializing competences tab
 	const lang = document.getElementById("lang");
 	const ide = document.getElementById("ide");
@@ -10,8 +11,15 @@ function initElement(){
 	const imgide = document.getElementById("imgide");
 	const imgidechild = imgide.children;
 	const imgchild = img.children;
-	
-	// initializing indexes for languages
+
+	// initializing more infos tab
+	const hobbybtn = document.getElementById("Hobbybtn");
+	const diplomabtn = document.getElementById("Diplomabtn");
+	const imghobby = document.getElementById("imghobby");
+	const imgdiploma = document.getElementById("imgdiploma");
+
+
+	// initializing indexes for languages and ide's
 	let i = 0;
 	let i_x = 0;
 	let i_i = 0;
@@ -20,6 +28,8 @@ function initElement(){
 	let ideA = 0;
 	let imgvim = 1;
 
+	
+	// initializing total length of ide images and languages images
 	while (i_a < imgidechild.length){
 		imgidechild[i_a].style.display = "none";
 		i_a++;
@@ -32,18 +42,36 @@ function initElement(){
 		i_x++;
 	}
 	
-	// index for languages 
+	// index for languages and ide's
 	i = 0;
 	i_a = 0;
+
+	// total length for ide and languages we add -- to avoid the index going to an image that does not exist
 	i_x--;
 	i_i--;
 	
+	//just to avoid showing something we don't want
+	imgdiploma.style.display="none";	
 	imgchild[0].style.display = "block";
+	
+	//Ininitializing functions for buttons
 	ideprog.onclick = showIde;
 	langprog.onclick = showLang;
 	rightslide.onclick = slideright;
 	leftslide.onclick = slideleft;
+	hobbybtn.onclick = showhobby;
+	Diplomabtn.onclick = showdiploma;
 
+	//Functions for language, ide's, hobbies and diploma buttons
+	function showhobby(){
+		imghobby.style.display = "grid";
+		imgdiploma.style.display ="none";
+	}
+	
+	function showdiploma(){
+		imghobby.style.display = "none";
+		imgdiploma.style.display ="grid";
+	}
 
 	function showLang(){
 		lang.style.display = "block";
@@ -63,6 +91,8 @@ function initElement(){
 		}
 	}
 	
+
+	//functions for the right and left sliders buttons
 	function slideright(){
 		if (langA == 1){
 			if ((i < i_x) && !(i > i_x)){
