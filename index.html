@@ -10,16 +10,21 @@
 		<script type= "text/javascript" src="./static/index.js"></script>
 		<script type="text/javascript" src="./static/clock.js"></script>
 		<script type="text/javascript" src="./static/windows.js"></script>
+		<script type="text/javascript" src="./static/btn.js"></script>
 	</head>
-	<body id="bodytag" onload="initElement(); onload=clock(); onload=main();">
-		<header class="Header-bar">
+	<body id="bodytag" onload="initElement(); onload=clock(); onload=mainbtn();">
+		<header>
+			<ul>
 				<h1>R.H</h1>
-		</header>
-
-		<nav class="nav-bar">
-			<a href="/">Projets</a>
-			<a href="/">Contact</a>
-		</nav>
+				<li><img id="btn3s" src="./images/more.png"></li>
+				<nav>
+				<li><a href="./contacts.html">Contact</a></li>
+				<li><a href="./projects.html">Projets</a></li>
+				<li><a class="active" href="./index.html">Accueil</a></li>
+				</nav>
+			</ul>
+                </header>
+		
 		<div id="left-side">
 			<img src="./images/png/computer_explorer-5.png"/>
 			<p id="computer"> My Computer</p>
@@ -139,7 +144,14 @@
 		</div>
 		
 		<footer id="footer">
-			RH Copyright
+			<img class="start" src="./images/startbutton.png">
+			<div class="tab">
+				<img src="./images/presentationtab.png">
+				<img src="./images/imagetab.png">
+				<img src="./images/competencetab.png">
+				<img src="./images/infosupptab.png">
+				<img src="./images/horlogetab.png">
+			</div>
 		</footer>
 	</body>
 

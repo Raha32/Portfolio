@@ -18,37 +18,64 @@ body{
 	}
 }
 
-.Header-bar{
+.terminaltext p {
+	font-size:32px;
+	color:white;
+	position:absolute;
+}
+
+ul{
 	Font-Family:Ink Free, Segoe Script;
 	Font-size:24px;
-	display:inline-block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	color:white;
+	background-color:#000;
+	overflow:hidden;
+}
+
+ul h1{
 	float:left;
-	color:white;
-	width:0;
+	margin:-2px 0 0 10px;
 }
 
-
-.nav-bar{
-	height:65px;
-	width:100%;
-	background-color:#020108;
-	box-shadow:10px 10px 10px rgba(0, 0, 0, 0.2);
+li {
+	float:right;
 }
 
-.nav-bar a{
-	left:86vw;
-	color:white;
+li #btn3s{
+	display:none;
+}
+
+#btn3s:hover{
+	width:50px;
+	height:auto;
+}
+
+#btn3s:active{
+	width:40px;
+	height:auto;
+}
+
+body#ter{
+	background-color:black;
+}
+
+li a{
+	display:block;
 	text-align:center;
-	height:65px;
-	width:6.5vw;
-	font-size:24px;
+	color:#fff;
+	padding:14px 16px;
 	text-decoration:none;
-	vertical-align:middle;
-	position:relative;
-	display:table-cell;
 }
 
-.nav-bar a:hover{
+ul a:hover{
+	background-color:white;
+	color:black;
+}
+
+.active{
 	background-color:white;
 	color:black;
 }
@@ -110,6 +137,11 @@ body{
 	color:white;
 }
 
+.projectwindow{
+	position:relative;
+	margin-top:20px;
+}
+
 .Horloge{
 	animation-duration:1s;
 	margin: 580px 0 0 70vw;
@@ -153,6 +185,14 @@ body{
 	margin:10px 0 0 68px;
 }
 
+.projectwindow{
+	background-image: url("../images/Projectwindow.png");
+	width:1014px;
+	height:695px;
+	margin-top:20px;
+}
+
+
 /* Presentation window */
 
 .Front-text{
@@ -163,6 +203,7 @@ body{
 	width:604px;
 	background-image: url("../images/WindowMediumpresentation.png");
 	box-shadow: -15px 13px 5px rgba(0, 0, 0, 0.2);
+	position:relative;
 }
 
 .Front-text h2{
@@ -184,6 +225,39 @@ body{
 	overflow:hidden;
 	white-space:nowrap;
 	animation: typing 3.5s  steps(40,end);
+}
+
+.writeterminal{
+	width:0;
+	margin: 0 auto;
+	overflow:hidden;
+	white-space:nowrap;
+	animation: typinterminal 3.5s  steps(40,end);
+	animation-fill-mode:both;
+}
+
+.writeterminal1{
+	margin: 0 auto;
+	overflow:hidden;
+	white-space:nowrap;
+	animation: typinterminal 3.5s 4s  steps(40,end);
+	animation-fill-mode:both;
+}
+
+.writeterminal2{
+	margin: 0 auto;
+	overflow:hidden;
+	white-space:nowrap;
+	animation: typinterminal 3.5s 6s steps(40,end);
+	animation-fill-mode:both;
+}
+@keyframes typinterminal{
+	from{
+		width:0;
+	}
+	to{
+		width:100%;
+	}
 }
 
 @keyframes typing{
@@ -392,12 +466,29 @@ body{
 
 #footer{
 	position:fixed;
-	height:30px;
+	height:35px;
 	width:100%;
 	margin:13px 0 0px 0px;
 	background-color:#C0C0C0;
 	bottom:0;
 }
+
+#footer img{
+	height:30px;
+	width:auto;
+}
+
+#footer .start{
+	height:40px;
+	position:fixed;
+	margin-top:-2px;
+}
+
+#footer .tab{
+	position:fixed;
+	margin:4px 0 0 80px;
+}
+
 @media (max-width:1800px){
 	.Picture_Profile{
 		margin:800px 0 0 63vw;
@@ -423,17 +514,18 @@ body{
 	.Lower-text{margin:-10px 0 0 2vw;}
 	.Horloge{margin:899px 0 0 65vw}
 	#footer{bottom:0;
-	position:unset;}
+	position:fixed;}
 }
 
 @media (max-width: 810px){
-	body{overflow-y:scroll;}
-	.Header-bar{}
-	.nav-bar{width:100%;}
-	.nav-bar a{
-		left:74vw;
-		width:12vw;
+	.projectwindow{
+		background-image: url(../images/windowmedium.png);
+		width:607px;
+		height:416px;
+		position:relative;
 	}
+
+	body{overflow-y:scroll;}
 	.Picture_Profile{
 		margin:0 0 0 32vw;
 		left:0;
@@ -446,15 +538,19 @@ body{
 	.Lower-text{margin:0 0 0 12vw;}
 	.Horloge{display:none;}
 	#footer{bottom:0;
-	position:unset;}
+	position:fixed;
+	}
 }
 
 @media (max-width: 689px){
-	.nav-bar{width:100%;}
-	.nav-bar a{
-		left:66vw;
-		width:16vw;
+	
+	.projectwindow{
+		background-image: url(../images/windowsmall.png);
+		width:420px;
+		height:288px;
+		position:relative;
 	}
+
 	.Picture_Profile{
 		margin:0 0 0 23vw;
 		left:0;
@@ -553,18 +649,28 @@ body{
 
 	.Horloge{display:none;}
 	#footer{bottom:0;
-	position:unset;}
+	position:fixed;}
 }
 
 @media (max-width: 479px){
-	
-	body{overflow-y:scroll;}
-	.Header-bar{}
-	.nav-bar{width:100%;}
-	.nav-bar a{
-		left:52vw;
-		width:23vw;
+	.projectwindow{
+		background-image: url(../images/window360size.png);
+		width:360px;
+		height:247px;
+		position:relative;
 	}
+
+	li #btn3s{
+		display:block;
+		margin-right:5px;
+		margin-top:5px;
+		width:45px;
+		height:auto;
+	}
+	
+	li{float:none;}
+	nav{display:none;}	
+	body{overflow-y:scroll;}
 	.Picture_Profile{
 		margin:0 0 0 13vw;
 		left:0;
@@ -666,7 +772,7 @@ body{
 
 	.Horloge{display:none;}
 	#footer{bottom:0;
-	position:unset;}
+	position:fixed;}
 
 
 }
@@ -674,12 +780,6 @@ body{
 @media (max-width: 390px){
 	
 	body{overflow-y:scroll;}
-	.Header-bar{}
-	.nav-bar{width:100%;}
-	.nav-bar a{
-		left:47vw;
-		width:26vw;
-	}
 	.Picture_Profile{
 		margin:0 0 0 7vw;
 		left:0;
@@ -734,7 +834,7 @@ body{
 	}
 	.Horloge{display:none;}
 	#footer{bottom:0;
-	position:unset;}
+	position:fixed;}
 
 
 }
