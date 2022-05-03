@@ -138,6 +138,7 @@ ul a:hover{
 }
 
 .projectwindow{
+	display: flex;
 	position:relative;
 	margin-top:20px;
 }
@@ -377,7 +378,7 @@ ul a:hover{
 
 .Lower-text{
 	overflow:hidden;
-	margin:-86px 0 0 15vw;
+	margin:-86px 0 45px 15vw;
 	display:block;
 	height:416px;
 	width:604px;
@@ -493,10 +494,12 @@ ul a:hover{
 	.Picture_Profile{
 		margin:800px 0 0 63vw;
 	}
+	.Lower-text{
+		margin-bottom: 200px;
+	}
 }
 @media (max-width:1220px){
 	body{overflow-y:scroll;}
-	.Header-bar{}
 	.nav-bar{width:100%;}
 	.nav-bar a{
 		left:80vw;
@@ -511,7 +514,7 @@ ul a:hover{
 	}
 	.Front-text{margin:5px 0 0 1vw;}
 	.Mid-Text{margin:-20px 0 0 40vw;}
-	.Lower-text{margin:-10px 0 0 2vw;}
+	.Lower-text{margin:-10px 0 45px 2vw;}
 	.Horloge{margin:899px 0 0 65vw}
 	#footer{bottom:0;
 	position:fixed;}
@@ -535,7 +538,7 @@ ul a:hover{
 	}
 	.Front-text{margin:0 0 0 12vw;}
 	.Mid-Text{margin:0 0 0 12vw;}
-	.Lower-text{margin:0 0 0 12vw;}
+	.Lower-text{margin:0 0 45px 12vw;}
 	.Horloge{display:none;}
 	#footer{bottom:0;
 	position:fixed;
@@ -615,7 +618,7 @@ ul a:hover{
 	.Lower-text{
 		width:420px;
 		height:288px;
-		margin:0 0 0 12vw;
+		margin:0 0 45px 12vw;
 		background-image: url("../images/WindowSmall.png")
 	}
 	.Lower-text h2{
@@ -669,7 +672,6 @@ ul a:hover{
 	}
 	
 	li{float:none;}
-	nav{display:none;}	
 	body{overflow-y:scroll;}
 	.Picture_Profile{
 		margin:0 0 0 13vw;
@@ -736,7 +738,7 @@ ul a:hover{
 	.Lower-text{
 		width:360px;
 		height:247px;
-		margin:0 0 0 6vw;
+		margin:0 0 45px 6vw;
 		background-image: url("../images/Window360size.png")
 	}
 	.Lower-text h2{
@@ -778,7 +780,11 @@ ul a:hover{
 }
 
 @media (max-width: 390px){
-	
+	.terminaltext p {
+		font-size:24px;
+		color:white;
+		position:absolute;
+	}
 	body{overflow-y:scroll;}
 	.Picture_Profile{
 		margin:0 0 0 7vw;
@@ -822,7 +828,7 @@ ul a:hover{
 	.Lower-text{
 		width:360px;
 		height:247px;
-		margin:0 0 0 0;
+		margin:0 0 45px 0;
 		background-image: url("../images/Window360size.png")
 	}
 	.Lower-text h2{

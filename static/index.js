@@ -60,7 +60,7 @@ function initElement(){
 	rightslide.onclick = slideright;
 	leftslide.onclick = slideleft;
 	hobbybtn.onclick = showhobby;
-	Diplomabtn.onclick = showdiploma;
+	diplomabtn.onclick = showdiploma;
 
 	//Functions for language, ide's, hobbies and diploma buttons
 	function showhobby(){
